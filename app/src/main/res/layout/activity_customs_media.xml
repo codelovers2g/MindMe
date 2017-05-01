@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colornavgrey"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text2"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorblack"
+        android:gravity="center_horizontal"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/img_view_exit_icon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:gravity="end|center_vertical"
+            android:src="@drawable/exit_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end|center_vertical"
+            android:layout_toRightOf="@+id/img_view_exit_icon"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ToggleButton
+                android:id="@+id/flash_switch"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/flashswitch"
+                android:src="@drawable/ic_flash_auto_white_24dp"
+                android:textOff=""
+                android:textOn="" />
+
+            <ImageView
+                android:id="@+id/Camera_switch_front_rear"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_photo_camera_white_24dp" />
+
+            <TextView
+                android:id="@+id/tv_DoneButton"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Done"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/activityHeaderText"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/cameraLayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorblack"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:visibility="visible">
+        <!--Layout for Video Recording "-->
+
+        <!--android:background="#82000000"-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="110dp"
+            android:background="@android:color/black"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Record a video from 5-120 Seconds"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/black">
+
+            <ImageView
+                android:id="@+id/img_view_Image_Gallery"
+                android:layout_width="60dp"
+                android:layout_height="65dp"
+                android:layout_alignTop="@+id/img_view_record_button"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toLeftOf="@+id/img_view_record_button"
+                android:layout_toStartOf="@+id/img_view_record_button"
+                android:src="@android:color/white"
+                android:visibility="gone" />
+
+            <com.mindmesolo.mindme.helper.Chronometer
+                android:id="@+id/video_recording_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@android:color/white"
+                android:textSize="11dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_view_record_button"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:src="@drawable/record_audio_icon" />
+
+            <ToggleButton
+                android:id="@+id/image_video_camera_switcher"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/img_view_record_button"
+                android:layout_toRightOf="@+id/img_view_record_button"
+                android:background="@drawable/switch_audio_video"
+                android:checked="false"
+                android:gravity="center"
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

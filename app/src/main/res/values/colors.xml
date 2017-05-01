@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#57ac2d</color>
+    <color name="colorPrimaryDark">#75C25A</color>
+    <color name="colorAccent">#75C25A</color>
+    <color name="colorgreen">#75C25A</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorblack">#000000</color>
+    <color name="colorgrey">#E5E5E5</color>
+    <color name="colorGreySearchView">#C9C9CE</color>
+    <color name="colorLightGray">#edeff2</color>
+    <color name="colorDarkgrey">#708090</color>
+    <color name="colornavgrey">#37475A</color>
+    <color name="colormenucolor">#38475B</color>
+    <color name="colorBlue">#446cb3</color>
+    <color name="colorRed">#B22222</color>
+    <color name="colororange">#f2784b</color>
+    <color name="Campaign">#446cb3</color>
+    <color name="Red">#FF0000</color>
+    <color name="colorDarkBlue">#01bfff</color>
+    <color name="colorDarkLink">#9A12B3</color>
+    <color name="colorTextRoutes">#649ED5</color>
+    <color name="colorbackground">#EEEEEE</color>
+    <color name="colorLinkCall">#FFA500</color>
+    <color name="colorBasicGray">#c8c8c8</color>
+    <color name="colorLeadRoutesFont">#555555</color>
+    <color name="hint_foreground_material_light">#57ac2d</color>
+    <color name="hint_foreground_material_dark">#75C25A</color>
+</resources>

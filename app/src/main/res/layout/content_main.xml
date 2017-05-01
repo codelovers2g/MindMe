@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mindmesolo.mindme.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view"
+        android:layout_marginTop="55dp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/linearlayout"
+        android:background="@color/colorBasicGray" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorwhite"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/home"
+            android:layout_width="37dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/home"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/contact"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/contact"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/campaign"
+            android:layout_width="35dp"
+            android:layout_height="33dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/campaign"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/leadroutes"
+            android:layout_width="17dp"
+            android:layout_height="33dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/leadroute"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textOff=""
+            android:textOn="" />
+
+        <ToggleButton
+            android:id="@+id/notification"
+            android:layout_width="30dp"
+            android:layout_height="33dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/notification"
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notificationCount"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/notificationcircle"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/colorwhite"
+        android:textSize="@dimen/heading_four"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorbackground"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/toolbartxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Voice"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/viewprogress"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginRight="190dp"
+        android:background="@color/colorDarkgrey"></View>
+
+
+    <LinearLayout
+        android:id="@+id/layout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/viewprogress"
+        android:background="@color/colorwhite"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <Chronometer
+            android:id="@+id/chronometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewprogress"
+            android:layout_marginTop="10dp"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imageRecord"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/chronometer"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorwhite"
+            android:src="@drawable/microphone" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageRecord"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/recordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/greencorner"
+                android:text="Record"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/stopbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/greencorner"
+                android:text="Stop"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/newRecord"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/replaceBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/greencorner"
+                    android:text="Replace"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/playBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:background="@drawable/greencorner"
+                    android:text="Play"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/StopPlaying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|center_horizontal"
+                    android:background="@drawable/greencorner"
+                    android:text="Stop"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout01"
+        android:background="@color/colorgrey"></View>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:background="@color/colorwhite" />
+
+    <ImageButton
+        android:id="@+id/Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ctaText"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/addbutton" />
+
+    <TextView
+        android:id="@+id/ctaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/importbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Add Call to Action"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/heading_two" />
+
+    <LinearLayout
+        android:id="@+id/importbtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorwhite"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/loginbutton"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/colorwhite" />
+    </LinearLayout>
+</RelativeLayout>

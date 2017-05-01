@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/colorwhite">
+
+    <com.mindmesolo.mindme.helper.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/contactImage"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/empty_profile"
+        app:civ_border_color="@color/colorwhite"
+        app:civ_border_width="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toEndOf="@+id/contactImage"
+        android:layout_toLeftOf="@+id/fav_birthday"
+        android:layout_toRightOf="@+id/contactImage"
+        android:layout_toStartOf="@+id/fav_birthday"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/Contactname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="-Name-"
+            android:textAllCaps="false"
+            android:textSize="@dimen/simple_text_big" />
+
+        <TextView
+            android:id="@+id/companyname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text=""
+            android:textAllCaps="false"
+            android:textSize="@dimen/simple_text_big"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="-Type-"
+            android:textColor="@color/colorgreen"
+            android:textSize="@dimen/simple_text"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fav_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+
+        >
+
+        <ImageView
+            android:id="@+id/birthday"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/birthdaycake"
+            android:visibility="gone" />
+
+        <ToggleButton
+            android:id="@+id/favoriteBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/favbutton"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </LinearLayout>
+
+</RelativeLayout>

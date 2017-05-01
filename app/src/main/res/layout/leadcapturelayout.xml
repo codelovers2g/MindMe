@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_list_view_tutorial_with_example"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/listview_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:src="@drawable/dashboardgrey" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="@dimen/list_view_image_height"
+            android:layout_height="@dimen/list_view_image_width"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/leftarrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/listview_image"
+            android:layout_toLeftOf="@+id/textnum"
+            android:layout_toRightOf="@+id/listview_image"
+            android:layout_toStartOf="@+id/textnum"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/listview_item_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text=""
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/heading_three" />
+
+            <TextView
+                android:id="@+id/listview_item_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text=""
+                android:textColor="@color/colorDarkgrey"
+                android:textSize="@dimen/heading_three"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView4"
+            android:layout_toStartOf="@+id/imageView4"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="0"
+            android:textColor="@color/colorblack"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>

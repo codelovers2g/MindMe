@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainRecycleView"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dot_layout"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp">
+
+        <ImageView
+            android:id="@+id/dot"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/dot" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dot_layout"
+        android:layout_alignRight="@+id/btntype"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/dot_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_main_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="message"
+            android:textColor="@color/colorblack"
+            android:textSize="@dimen/simple_text" />
+
+        <TextView
+            android:id="@+id/tv_main_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10-Aug-2016"
+            android:textColor="@color/colorDarkgrey"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btntype"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignRight="@+id/imageView2"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/notifactionbtn"
+        android:focusable="false"
+        android:text="Lead"
+        android:textAllCaps="false"
+        android:textColor="@color/colorwhite"
+        android:textSize="@dimen/simple_text" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="10dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/leftarrow" />
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:src="@drawable/mindmewhite" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorwhite"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/login_layout_margin"
+                android:layout_marginTop="@dimen/login_margin"
+                android:text="Sign Up"
+                android:textSize="@dimen/heading_one"
+                android:textStyle="bold" />
+
+            <!--"Enter the information below to start using MindMe"-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/login_margin"
+                android:layout_marginRight="@dimen/login_margin"
+                android:text="Enter your early access code below to begin using our MindMe Beta."
+                android:textAlignment="center"
+                android:textSize="@dimen/simple_text" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/login_layout_margin"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_margin="@dimen/login_field_margin"
+                    android:background="@drawable/shape"
+                    android:hint="Enter your email address"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="5dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorgreen"
+                    android:textColorHint="@color/colorgreen"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/editTextInvitationcode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/shape"
+                    android:hint="Enter invitation code"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorgreen"
+                    android:textColorHint="@color/colorPrimary"
+                    android:textSize="@dimen/heading_two" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorgrey"></View>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_button"
+                android:paddingLeft="@dimen/login_margin"
+                android:paddingRight="@dimen/login_margin"
+                android:text="Confirm"
+                android:textAllCaps="false"
+                android:textColor="@color/colorwhite"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="100dp"
+                android:onClick="Weblinkclick"
+                android:text="Don't have an invitation?"
+                android:textAllCaps="false"
+                android:textColor="@color/colorgreen"
+                android:textSize="@dimen/heading_three" />
+
+            <TextView
+                android:id="@+id/loginPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape"
+                android:text="Have an Account?"
+                android:textAllCaps="false"
+                android:textColor="@color/colorgreen"
+                android:textSize="@dimen/heading_three" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

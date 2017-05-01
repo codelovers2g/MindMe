@@ -1,0 +1,203 @@
+<resources>
+    <string name="app_name">MindMe</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="State_prompt">Select State</string>
+    <string name="Type_prompt">Select Phone Type</string>
+    <string name="Code_prompt">Select Area Code</string>
+    <string name="my_facebook_app_id">1020047038117000</string>
+
+    <string-array name="industry_array">
+        <item>Industry</item>
+        <item>Accounting</item>
+        <item>Aesthetics</item>
+        <item>Cleaning</item>
+        <item>Coaching</item>
+        <item>Consulting</item>
+        <item>Contractor</item>
+        <item>Creative Services</item>
+        <item>Event Planning</item>
+        <item>Financial Planning</item>
+        <item>Fitness</item>
+        <item>Home Services</item>
+        <item>Information Technology</item>
+        <item>Landscaping</item>
+        <item>Legal</item>
+        <item>Marketing</item>
+        <item>Martial Arts</item>
+        <item>Massage</item>
+        <item>Medical</item>
+        <item>Music</item>
+        <item>Network sales</item>
+        <item>Nutrition</item>
+        <item>Photography</item>
+        <item>Real Estate</item>
+        <item>Retail</item>
+        <item>Sales</item>
+        <item>Sports Training</item>
+        <item>Telecommunications</item>
+        <item>Travel</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="State_arrays">
+        <item>State</item>
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Washington DC</item>
+        <item>Delaware</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Hawaii</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Iowa</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Maine</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Mississippi</item>
+        <item>Missouri</item>
+        <item>Montana</item>
+        <item>Nebraska</item>
+        <item>Nevada</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>NY</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Vermont</item>
+        <item>Virginia</item>
+        <item>Washington</item>
+        <item>West Virginia</item>
+        <item>Wisconsin</item>
+        <item>Wyoming</item>
+    </string-array>
+    <string-array name="Type_arrays">
+        <item>MOBILE</item>
+        <item>HOME</item>
+        <item>DEFAULT</item>
+        <item>WORK</item>
+        <item>FAX</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="Code_arrays">
+        <item>123</item>
+        <item>424</item>
+        <item>789</item>
+        <item>852</item>
+        <item>963</item>
+        <item>257</item>
+        <item>159</item>
+        <item>753</item>
+    </string-array>
+    <string name="Business_h1">Business Hours</string>
+    <string name="Business_h2">Choose an individual day for other options </string>
+    <string name="GreetingForwarding">Greeting &amp; Forwarding</string>
+    <string name="Conversation_heading">Conversations</string>
+
+    <string name="Closed">Closed </string>
+    <string name="OpeningTime">Opening Time</string>
+    <string name="ClosingTime">Closing Time</string>
+    <string name="ByAppointmentOnly">By Appointment Only</string>
+    <string name="error">Oops! Something went wrong</string>
+    <string-array name="dummy_data_tags">
+        <item>qwert</item>
+        <item>cvbn</item>
+        <item>dsfg</item>
+        <item>xcv</item>
+    </string-array>
+    <string name="EmailHeading">Email</string>
+    <string name="Restrictions">Restrictions</string>
+    <string name="CallInBusinesHourOnly">Only Call between 9 am to 9 pm  </string>
+    <string name="TextOnlyBusinesHour">Only Text between 9 am to 9 pm </string>
+    <string name="TurinOffBrodacast">Turn this off to broadcast call outside your normal business hours. MindeMe will never send you a call before 9 am to 9pm local time.Monday-Sunday</string>
+    <string name="TextMsg">text(sms)</string>
+    <string name="TurnThisOffToBroadcast">Turns this off to broadcast call outside your normal business hours, This does not apply to text replies contact opt ins</string>
+    <string name="tools_settings_heading">Tools &amp; Settings</string>
+
+    <string name="tools_settings_Tags_heading">Tags</string>
+
+    <!--///////////////////lead Capture Strings ///////////////////////////-->
+    <string name="onecredit">Your message will use 1 credit</string>
+    <string name="twocredit">Your message will use 2 credits</string>
+    <string name="emailRoute">Email Route</string>
+    <string name="emailRouteText">Forward web form to this email</string>
+    <string name="emailGreeting">Email Greeting</string>
+    <string name="smsGreeting">SMS Greeting</string>
+    <string name="calltoaction">Call to Action</string>
+    <string name="calltoactionText">Get your users to take action by sending them to your website, social media profile, etc.</string>
+    <string name="push">Send Push Notification</string>
+    <string name="email">Send Email Notification</string>
+    <string name="sms">Send SMS Notification</string>
+    <string name="alertNewLeads">Notify Me on New Leads</string>
+    <string name="greetinghint">Hello Thank you for your interest in business. Well be in touch shortly</string>
+
+    <!--///////////////////ActivitySignup Strings ///////////////////////////-->
+
+    <string name="verifyText">Verify Mobile Number</string>
+    <string name="verificationText">Please enter the verification code texted to your mobile phone number.</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="successfullText">Your MindMe account has been successfully created!</string>
+    <string name="newAreaText">New Area Code Request</string>
+    <string name="areaCodeInfo">Choose a new area code from the available options below. Your phone number will change based on what is available.</string>
+    <string name="keywordText">People will text this word to learn more about your business. Soon leads will be flying in.</string>
+    <string name="emailText">Add this email to your website contact form and leads will be sent automatically to MindMe.</string>
+    <string name="email1">-Instantly get notified of new leads</string>
+    <string name="email2">-Instantly respond and engage each lead</string>
+    <string name="email3">-Instantly capture leads</string>
+    <string name="resetpasswordtext">To reset your password, please enter your current password below.</string>
+
+
+    <!--///////////////////Getting Started Strings ///////////////////////////-->
+    <!--<string name="gettingstartedhelptext">You can use MindMe now,But you'll Really be humming once you complete your profile</string>-->
+    <string name="toolsAndSettingsEmail1">By default, we are using your sign up email as the main address from which we send emails.</string>
+    <string name="toolsAndSettingsEmail3">Make sure this is a working email address if you want email replies.</string>
+    <string name="runtime_permissions_txt">Please enable ALL permissions from app settings.</string>
+    <string name="title_activity_contacts_and_lists">Contacts &amp; Lists</string>
+
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+
+
+    <!-- all text is used in mobile pages activity text -->
+    <string name="mobile_pages_heading">Mobile Pages</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <!--&lt;!&ndash; TODO: Remove or change this is required for FIRE BASE PUSH NOTIFICATIONS  &ndash;&gt;-->
+    <!--<string name="google_app_id" translatable="false">1:516512552267:android:54580532de0b3997</string>-->
+    <!--<string name="gcm_defaultSenderId" translatable="false">516512552267</string>-->
+    <!--<string name="default_web_client_id" translatable="false">337894902146-e4uksm38sne0bqrj6uvkbo4oiu4hvigl.apps.googleusercontent.com</string>-->
+    <!--<string name="ga_trackingId" translatable="false">UA-65557217-3</string>-->
+    <!--<string name="firebase_database_url" translatable="false">https://example-url.firebaseio.com</string>-->
+    <!--<string name="google_api_key" translatable="false">AIzbSyCILMsOuUKwN3qhtxrPq7FFemDJUAXTyZ8</string>-->
+    <!--<string name="google_crash_reporting_api_key" translatable="false">AIzbSyCILMsOuUKwN3qhtxrPq7FFemDJUAXTyZ8</string>-->
+</resources>

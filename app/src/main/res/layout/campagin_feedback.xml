@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorwhite"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:weightSum="5">
+
+    <ImageView
+        android:id="@+id/feedbacklogo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight=".5"
+        android:paddingLeft="5dp"
+        android:src="@drawable/newleads" />
+
+    <LinearLayout
+        android:id="@+id/leadCaptureLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="New Leads"
+            android:textAlignment="center"
+            android:textColor="@color/colorblack"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/leadcapturecount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="26dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/leadcapturecount"
+            android:layout_toRightOf="@+id/feedbacklogo"
+            android:padding="5dp"
+            android:text="Last 7 days"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/feedbackLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Feedback"
+            android:textAlignment="center"
+            android:textColor="@color/colorblack"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/feedback"
+            android:text="20" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Tell us what you think"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

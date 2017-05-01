@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeName">
+
+        <TextView
+            android:id="@+id/toolbartext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Call To Action"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/yes_no_maybe_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:id="@+id/yes_no_maybe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Please Respond Below"
+            android:textAlignment="center"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                android:text="YES"
+                android:textColor="@color/colorwhite" />
+
+            <Button
+                android:id="@+id/no"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorRed"
+                android:text="NO"
+                android:textColor="@color/colorwhite"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/maybe"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@color/colororange"
+                android:text="MAYBE"
+                android:textColor="@color/colorwhite"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/pollOutputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/pollText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Please Choose Below"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option1Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="Option1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="Option2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option3Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:hint="Option3" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/feedbackOutputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Select a Rating"
+            android:textSize="15dp" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linkOutputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:background="@color/colorAccent"
+            android:hint="Click Here"
+            android:textAllCaps="false"
+            android:textColorHint="@color/colorwhite"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadowbottom" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/responsebtn"
+                android:layout_width="39dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/responsecta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/responseToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Response"
+                android:textColor="@color/colorblack"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/pollbtn"
+                android:layout_width="43dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/pollcta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/pollToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poll"
+                android:textColor="@color/colorblack"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/feedbackbtn"
+                android:layout_width="41dp"
+                android:layout_height="40dp"
+
+                android:layout_margin="5dp"
+                android:background="@drawable/feedbackcta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/feedbackToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textColor="@color/colorblack"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/linkcallbtn"
+                android:layout_width="32dp"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/linkcallcta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/callToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Link/Call"
+                android:textColor="@color/colorblack"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadowtop" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--first layout -->
+            <LinearLayout
+                android:id="@+id/responelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/responceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Response Text"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/response"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_toRightOf="@+id/responceText"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+                        android:hint="Please Respond Below"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:textSize="15dp" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/nobtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maybe"
+                        android:textSize="17dp" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/maybebtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button Corners"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/buttonCornerSeekbar"
+                        android:layout_marginTop="15dp"
+                        android:text="Square" />
+
+                    <SeekBar
+                        android:id="@+id/buttonCornerSeekbar"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:max="50"
+                        android:progress="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/buttonCornerSeekbar"
+                        android:layout_marginTop="15dp"
+                        android:text="Round" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Alignment"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/left"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/alignleft"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+
+                        <ToggleButton
+                            android:id="@+id/center"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/aligncenter"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+
+                        <ToggleButton
+                            android:id="@+id/right"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/alignright"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorgrey"></View>
+            </LinearLayout>
+
+            <!--second layout -->
+            <LinearLayout
+                android:id="@+id/pollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Poll Text"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/pollEditText"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+                        android:hint="Please Choose Below"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Option"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/option1EditText"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+                        android:hint="Option1"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Option"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/option2EditText"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+                        android:hint="Option2"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp"
+
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Option"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/option3EditText"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+                        android:hint="Option3"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorgrey" />
+            </LinearLayout>
+
+            <!--third layout -->
+            <LinearLayout
+                android:id="@+id/feedbackLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feedback Text"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/feedbackEditText"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+                        android:hint="Select a Rating"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Element Size"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/elementSizeSeekbar"
+                        android:layout_marginTop="15dp"
+                        android:text="Small" />
+
+                    <SeekBar
+                        android:id="@+id/elementSizeSeekbar"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:max="50"
+                        android:progress="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/elementSizeSeekbar"
+                        android:layout_marginTop="15dp"
+                        android:text="Large" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Alignment"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/leftfeedback"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/alignleft"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+
+                        <ToggleButton
+                            android:id="@+id/centerfeedback"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/aligncenter"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+
+                        <ToggleButton
+                            android:id="@+id/rightfeedback"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/alignright"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorgrey" />
+            </LinearLayout>
+
+
+            <!--fourth layout -->
+            <LinearLayout
+                android:id="@+id/linkLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button Type"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/link"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/transparent"
+                            android:text="Link"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorAccent"
+                            android:textOff="Link"
+                            android:textOn="Link" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/colorgrey" />
+
+                        <ToggleButton
+                            android:id="@+id/call"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:text="Call"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorgrey"
+                            android:textOff="Call"
+                            android:textOn="Call" />
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/colorgrey" />
+
+                        <ToggleButton
+                            android:id="@+id/email"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            android:text="email"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorgrey"
+                            android:textOff="Email"
+                            android:textOn="Email" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button Title"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/EditTextTitle"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+                        android:hint="Click Here"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button Action"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/EditTextAction"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/shape"
+                        android:gravity="right"
+
+                        android:hint="Add URL"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColorHint="@color/colorgrey"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button Corners"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/buttonCornerSeekbarLink"
+                        android:layout_marginTop="15dp"
+                        android:text="Square" />
+
+                    <SeekBar
+                        android:id="@+id/buttonCornerSeekbarLink"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:max="50"
+                        android:progress="0" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/buttonCornerSeekbarLink"
+                        android:layout_marginTop="15dp"
+                        android:text="Round" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Button Size"
+                        android:textSize="17dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/buttonSizeSeekbarLink"
+                        android:layout_marginTop="15dp"
+                        android:text="small" />
+
+                    <SeekBar
+                        android:id="@+id/buttonSizeSeekbarLink"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:max="100"
+                        android:progress="30" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/buttonSizeSeekbarLink"
+                        android:layout_marginTop="15dp"
+                        android:text="Large" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorgrey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Alignment"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <ToggleButton
+                            android:id="@+id/leftLink"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/alignleft"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+
+                        <ToggleButton
+                            android:id="@+id/centerLink"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/aligncenter"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+
+                        <ToggleButton
+                            android:id="@+id/rightLink"
+                            android:layout_width="40dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/alignright"
+                            android:text=""
+                            android:textOff=""
+                            android:textOn="" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorgrey" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

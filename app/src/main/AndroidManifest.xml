@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mindmesolo.mindme"
+    android:largeScreens="true"
+    android:normalScreens="true"
+    android:smallScreens="true">
+
+    <permission
+        android:name="com.vogella.android.locationapi.maps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/my_facebook_app_id" />
+
+    <application
+        android:name=".MindMeApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:replace="android:icon">
+
+        <!-- firebase  messaging code -->
+        <service android:name=".googlePushNotifcation.MyAndroidFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".googlePushNotifcation.MyAndroidFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".googlePushNotifcation.RegistrationIntentService" />
+
+        <!-- Goolge API Key -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCK0_eMfP6j67Cv1pQsYj-QDzWe7WQvukM" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.parse.push.gcm_sender_id"
+            android:value="id:516512552267" />
+
+        <!-- firebase  end -->
+        <activity
+            android:name=".LoginSignup.SplashActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dashboard"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LoginSignup.login"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GettingStarted.GettingStart"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".GettingStarted.SocialMedia"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.ContactOptions"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".GettingStarted.Profile_settings"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ToolsAndSettings.Resetpassword"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.ResetPassword2"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.ActivitySignup"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.SignupSocial2"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.SignupPassword3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.SignupCompleteProfile4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.Signupverify5"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.SignupCongrats6"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.TourMobile1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.TourAreacode2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.TourKeyword3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginSignup.TourEmail4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactAndLists.Interest"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.Tags"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".GettingStarted.BusinessHours"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GettingStarted.BusinessHoursInnerSettings"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GettingStarted.Greeting_and_forwarding"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactAndLists.Summary"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.AddInterest"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactAndLists.AddTag"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactAndLists.AddLists"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GettingStarted.ImportContactType"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GettingStarted.OrganizeContacts"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GettingStarted.Searchcontact"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactAndLists.AddContact"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ContactAndLists.ContactLists"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.ContactsAndLists"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.FavContact"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.Birthday"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.EditContact"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".CreateCampaign.CreateEmailOption"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCampaign.CreateParagraph"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateCampaign.CreateCampaignDateFilters"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCampaign.CreateCampaignChooseRoute"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCampaign.CreateNewCampaign"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCampaign.CreateTitle"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCampaign.CallToAction"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateCampaign.CallToActionElements"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateCampaign.CreateVoiceCampaign"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ContactAndLists.ContactView"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateCampaign.CreateTextCampaign"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".LoginSignup.LaunchScreen" />
+        <activity
+            android:name=".CreateCampaign.CreateEmailCampaign"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateCampaign.CreateCampaignPreviewScreen"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ViewCampaigns.CampaignDetailView"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ViewCampaigns.CampaignGetAllDetail"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".FeedBack.FeedBackMain"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FeedBack.ReferAFriend"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".FeedBack.ReportABug"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".FeedBack.GiveFeedBack"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".FeedBack.MindMeRefer"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/my_facebook_app_id" />
+
+        <activity
+            android:name=".ToolsAndSettings.ToolsAndSettings"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LeadRoutes.LeadCapture"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LeadRoutes.EmailRoute"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LeadRoutes.EditEmailRoute"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LeadRoutes.PhoneRoute"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LeadRoutes.TextRoute"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".LeadRoutes.EditTextRoute"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Notifcations.Notification"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ContactAndLists.ContactListBirthday"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ToolsAndSettings.ToolsSettingsTags"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.ToolsSettingsInterests"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.ToolsSettingsLists"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.UpdateLists"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.UpdateInterests"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.UpdateTags"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.PasswordRecovery"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.ContactTypes"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ToolsAndSettings.RestrictionsToolsSettings"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GettingStarted.TrainingAndSupport"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ToolsAndSettings.ToolsAndSettingsEmail"
+            android:label=""
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".LeadRoutes.NewLeads"
+            android:label=""
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ViewCampaigns.CampaignContactView"
+            android:label=""
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Conversation.ConversationMain"
+            android:label=""
+
+            />
+        <activity
+            android:name=".CreateMobilePages.CreateWelComePage"
+            android:label="" />
+        <activity
+            android:name=".ViewMobilePages.ViewMobilePages"
+            android:label="" />
+        <activity
+            android:name=".ViewMobilePages.ViewSinglePageDetail"
+            android:label=""
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ViewMobilePages.ViewMobilePagesList"
+            android:label=""
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateMobilePages.CreateMobilePage"
+            android:label="" />
+        <activity
+            android:name=".CreateMobilePages.AddSpecialOffer"
+            android:label="" />
+        <activity
+            android:name=".CreateMobilePages.AddLeadForm"
+            android:label="" />
+        <activity
+            android:name=".CreateMobilePages.CreateMobilePagePreview"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ViewMobilePages.ViewHtmlPages"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <!-- Register library Activities -->
+        <activity
+            android:name="com.afollestad.materialcamera.CaptureActivity"
+            android:theme="@style/MaterialCamera.CaptureActivity" />
+        <activity
+            android:name="com.afollestad.materialcamera.CaptureActivity2"
+            android:theme="@style/MaterialCamera.CaptureActivity" />
+        <activity
+            android:name=".AudioRecorder.PlayAndRecordAudio"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".AudioRecorder.VideoPlayer" />
+        <activity
+            android:name=".AudioRecorder.PreviewImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen" />
+        <activity
+            android:name=".AudioRecorder.MediaRecordingNew"
+            android:theme="@style/ThemeFullscreen" />
+        <activity
+            android:name=".CreateMobilePages.AddSocialMedia"
+            android:label="" />
+        <activity
+            android:name=".CreateMobilePages.AddHours"
+            android:label=" "
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateMobilePages.AddMap"
+            android:label=" "
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateMobilePages.EditHours"
+            android:label=""
+            android:windowSoftInputMode="adjustPan" />
+
+        <service android:name=".Services.SyncContacts" />
+
+
+    </application>
+
+</manifest>

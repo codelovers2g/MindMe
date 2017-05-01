@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/android_list_view_tutorial_with_example"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginStart="5dp"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/listview_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/listview_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_toRightOf="@+id/listview_image"
+            android:paddingTop="15dp"
+            android:text="data"
+            android:textAlignment="textStart"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/checkboxStatus"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="13dp"
+            android:layout_toLeftOf="@+id/endImage"
+            android:layout_toStartOf="@+id/endImage"
+            android:background="@drawable/round_button"
+            android:paddingRight="3dp"
+            android:src="@drawable/check"
+            android:textAlignment="textEnd" />
+
+        <ImageView
+            android:id="@+id/endImage"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/leftarrow"
+            android:textAlignment="textEnd" />
+    </RelativeLayout>
+</LinearLayout>

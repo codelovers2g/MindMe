@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeName">
+
+        <TextView
+            android:id="@+id/toolbartxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Paragraph"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayouttwo"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editTextTwo1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:hint="Tap to Edit"
+            android:imeActionLabel="Done"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textSize="15dp"
+
+            />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorgrey" />
+
+        <EditText
+            android:id="@+id/editTextTwo2"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:hint="Tap to Edit"
+            android:imeActionLabel="Done"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:gravity="left"
+        android:hint="Tap to Edit"
+        android:imeActionLabel="Done"
+        android:imeOptions="actionDone"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/simple_text" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorgrey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Columns"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/layoutnew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/one"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:checked="true"
+                android:text="One"
+                android:textAllCaps="false"
+                android:textColor="@drawable/toggle_text_color_green"
+                android:textOff="One"
+                android:textOn="One" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorgrey" />
+
+            <ToggleButton
+                android:id="@+id/two"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:text="Two"
+                android:textAllCaps="false"
+                android:textColor="@drawable/toggle_text_color_green"
+                android:textOff="Two"
+                android:textOn="Two"
+
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layoutnew"
+        android:layout_marginLeft="10dp"
+        android:background="@color/colorgrey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font Size"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fontSizeSeekbar"
+            android:layout_marginTop="15dp"
+            android:text="Small"
+            android:textSize="10dp" />
+
+        <SeekBar
+            android:id="@+id/fontSizeSeekbar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:max="50"
+            android:progress="15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/fontSizeSeekbar"
+            android:layout_marginTop="15dp"
+            android:text="Large"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/colorgrey"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Font Weight"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fontWeightSeekbar"
+            android:layout_marginTop="12dp"
+            android:text="Thin" />
+
+        <SeekBar
+            android:id="@+id/fontWeightSeekbar"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:max="500"
+            android:progress="200" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/fontWeightSeekbar"
+            android:layout_marginTop="12dp"
+            android:text="Bold"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/colorgrey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alignment"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/alignleft"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <ToggleButton
+                android:id="@+id/center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/aligncenter"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+            <ToggleButton
+                android:id="@+id/right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/alignright"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorgrey"
+        android:textAllCaps="false" />
+</LinearLayout>

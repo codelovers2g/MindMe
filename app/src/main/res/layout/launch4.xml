@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/imageLayout"
+        android:layout_width="230dp"
+        android:layout_height="218dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:padding="40dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/organize" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Organize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageLayout"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Organize"
+        android:textAlignment="center"
+        android:textColor="#B2B2B2"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/OrganizeFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Organize"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Manage Your Contacts &amp; Lists"
+        android:textAlignment="center"
+        android:textColor="#B2B2B2"
+        android:textSize="@dimen/login_layout_margin" />
+
+</RelativeLayout>

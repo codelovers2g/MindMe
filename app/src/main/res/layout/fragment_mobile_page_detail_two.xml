@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorgrey"
+        android:padding="10dp"
+        android:text="Summery Statistics" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/Page_view_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/eye" />
+
+        <TextView
+            android:id="@+id/Page_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Page_view_image"
+            android:padding="5dp"
+            android:text="Page views"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textViewPageViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Page_view_text"
+            android:layout_toRightOf="@+id/Page_view_image"
+            android:padding="5dp"
+            android:text="Last: Thu, Mar 20, 2017 @40:00 am" />
+
+        <TextView
+            android:id="@+id/textViewPageViewCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/colororange"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/lead_capture_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/leadhook" />
+
+        <TextView
+            android:id="@+id/lead_capture_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lead_capture_image"
+            android:padding="5dp"
+            android:text="Lead Captured"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/textViewLeadCaptureDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lead_capture_text"
+            android:layout_toRightOf="@+id/lead_capture_image"
+            android:padding="5dp"
+            android:text="Last: Thu, Mar 21, 2017 @40:00 am" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/textViewLeadCaptureDate" />
+
+        <TextView
+            android:id="@+id/textViewLeadCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/colorDarkBlue"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TextViewSimpleMobilePageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorgrey"
+            android:padding="10dp"
+            android:text="Mobile Page Url" />
+
+        <TextView
+            android:id="@+id/textViewLinkUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextViewSimpleMobilePageDetail"
+            android:layout_toRightOf="@+id/ImageView01"
+            android:padding="10dp"
+            android:text="http://stackoverflow.com/demo" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/textViewLinkUrl"
+            android:background="@color/colorgrey" />
+
+
+        <TextView
+            android:id="@+id/textViewShareLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view1"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:padding="5dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:text="Share"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textViewCopyLinkText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textViewLinkUrl"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:text="Copy Link"
+            android:textColor="@color/colorPrimary" />
+    </RelativeLayout>
+</LinearLayout>

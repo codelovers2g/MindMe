@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_map_elements"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mindmesolo.mindme.CreateMobilePages.AddMap">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Map Elements"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgrey"
+                android:padding="10dp"
+                android:text="EDIT ADDRESS" />
+
+            <EditText
+                android:id="@+id/ed_enter_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Enter address"
+                android:overScrollMode="always"
+                android:padding="10dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorgrey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_set_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Set Location "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_get_current_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="15dp"
+                    android:text="Current Location "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorgrey"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/childlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:weightSum="6">
+
+                <ToggleButton
+                    android:id="@+id/t_btn_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/sixty_dayz"
+                    android:layout_margin="3dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="true"
+                    android:text="Map"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Map"
+                    android:textOn="Map"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/t_btn_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/sixty_dayz"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@+id/week"
+                    android:layout_weight="2"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Address"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Address"
+                    android:textOn="Address"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/t_btn_both"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/sixty_dayz"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@+id/month"
+                    android:layout_weight="2"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Both"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Both"
+                    android:textOn="Both"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorgrey" />
+
+            <LinearLayout
+                android:id="@+id/fragment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_address_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:hint="Address"
+                android:padding="10dp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgrey"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Choose Route"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/importbtn"
+        android:layout_below="@+id/innerRelatvieLayout"
+        android:background="@color/colorwhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/innerRelatvieLayout"
+            android:background="@color/colorwhite"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Message Priority"
+                android:textColor="@color/colorblack"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorgrey"></View>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/notifcation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Reach your contacts through Email, Text and Voice broadcast"
+                android:padding="10dp"
+                android:text=""
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/notifcation2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:padding="10dp"
+                android:text="Select one or more routes. Message will be sent based on available contact info for each recipient."
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/notifcation5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:padding="30dp"
+                android:text="text5"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/NotificationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorgrey" />
+
+                <TextView
+                    android:id="@+id/notifaction3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view4"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="text3"
+                    android:textAlignment="textStart" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/multyRouteSupport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginRight="11dp" />
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/notifaction3"
+                    android:background="@color/colorgrey" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/innerRelatvieLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorgrey"
+        android:paddingRight="5dp">
+
+        <ProgressBar
+            android:id="@+id/progressStatus"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_weight="2"
+            android:background="@color/colorwhite"
+            android:progress="20"
+            android:progressDrawable="@drawable/style_progress_bar_campaign_gray"
+
+            />
+
+        <ImageView
+            android:id="@+id/campaignimage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/campaignimage2"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/airplaneblue" />
+
+        <TextView
+            android:id="@+id/messagestatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/campaignimage"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/simple_text" />
+
+        <TextView
+            android:id="@+id/messagetext"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/campaignimage"
+            android:layout_toRightOf="@+id/messagestatus"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Message"
+            android:textSize="@dimen/simple_text" />
+
+        <ImageView
+            android:id="@+id/campaignimage2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/route_dots" />
+
+        <ImageView
+            android:id="@+id/campaignimage3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/contactblue" />
+
+        <TextView
+            android:id="@+id/SelectedContactsStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/contactText"
+            android:layout_toLeftOf="@+id/contactText"
+            android:layout_toStartOf="@+id/contactText"
+            android:padding="5dp"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/simple_text" />
+
+        <TextView
+            android:id="@+id/contactText"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/campaignimage3"
+            android:layout_alignStart="@+id/campaignimage3"
+            android:layout_below="@+id/campaignimage3"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Contact"
+            android:textSize="@dimen/simple_text" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/importbtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorwhite"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/loginbutton"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textColor="@color/colorwhite" />
+    </LinearLayout>
+
+
+</RelativeLayout>

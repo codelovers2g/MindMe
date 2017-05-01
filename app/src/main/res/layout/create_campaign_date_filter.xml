@@ -1,0 +1,458 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Filter By Date"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/relativelayoutone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/colorbackground">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="15dp"
+            android:text="Contacts Selected "
+            android:textColor="@color/colorblack"
+            android:textSize="@dimen/simple_text_big" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tab_layout"
+            android:layout_toLeftOf="@+id/textView4"
+            android:layout_toStartOf="@+id/textView4"
+            android:padding="10dp"
+            android:text="0"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/heading_one" />
+
+        <ImageView
+            android:id="@+id/textView4"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/contactblue" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativelayouttwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayoutone"
+                android:background="@color/colorwhite"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <ToggleButton
+                    android:id="@+id/contactcreated"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Contact Created"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Contact Created"
+                    android:textOn="Contact Created"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/birthday"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/contactcreated"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Lead Created"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Birthday"
+                    android:textOn="Birthday"
+                    android:textSize="12sp"
+                    android:visibility="visible" />
+
+                <ToggleButton
+                    android:id="@+id/trailcreated"
+                    android:layout_width="95dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/leadcreated"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Trail Created"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Trail Created"
+                    android:textOn="Trail Created"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ToggleButton
+                    android:id="@+id/customercreated"
+                    android:layout_width="95dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/contactcreated"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Customer Created"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Customer Created"
+                    android:textOn="Customer Created"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ToggleButton
+                    android:id="@+id/leadcreated"
+                    android:layout_width="95dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/contactcreated"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/customercreated"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="false"
+                    android:text="Birthday"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Lead Created"
+                    android:textOn="Lead Created"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/datefilters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayouttwo"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorwhite"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ToggleButton
+                    android:id="@+id/last"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Last"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Last"
+                    android:textOn="Last"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/next"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@+id/last"
+                    android:background="@drawable/contactscreated1"
+                    android:enabled="false"
+                    android:text="Next"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Next"
+                    android:textOn="Next"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/This"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@+id/next"
+                    android:background="@drawable/contactscreated1"
+                    android:text="This"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="This"
+                    android:textOn="This"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/custom"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@+id/This"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Custom"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Custom"
+                    android:textOn="Custom"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/childlayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/custom">
+
+                    <ToggleButton
+                        android:id="@+id/saven_dayz"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="7 Days"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="7 Days"
+                        android:textOn="7 Days"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/fourty_dayz"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/saven_dayz"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="14 Days"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="14 Days"
+                        android:textOn="14 Days"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/thirty_dayz"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/fourty_dayz"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="30 Days"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="30 Days"
+                        android:textOn="30 Days"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/sixty_dayz"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/thirty_dayz"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="60 Days"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="60 Days"
+                        android:textOn="60 Days"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/week"
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/sixty_dayz"
+                        android:layout_margin="3dp"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="Week"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="Week"
+                        android:textOn="Week"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/month"
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/sixty_dayz"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/week"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="Month"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="Month"
+                        android:textOn="Month"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/quarter"
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/sixty_dayz"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/month"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="Quarter"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="Quarter"
+                        android:textOn="Quarter"
+                        android:textSize="12sp" />
+
+                    <ToggleButton
+                        android:id="@+id/year"
+                        android:layout_width="70dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/sixty_dayz"
+                        android:layout_margin="3dp"
+                        android:layout_toRightOf="@+id/thirty_dayz"
+                        android:background="@drawable/contactscreated1"
+                        android:enabled="false"
+                        android:text="Year"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/toggle_textcolor"
+                        android:textOff="Year"
+                        android:textOn="Year"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/customfilters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/childlayout"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/date_from"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="From :" />
+
+                    <TextView
+                        android:id="@+id/from_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/date_from"
+                        android:padding="5dp"
+                        android:text="Set start date"
+                        android:textColor="@color/colorgreen" />
+
+                    <TextView
+                        android:id="@+id/date_to"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/from_date"
+                        android:padding="5dp"
+                        android:text="To :" />
+
+                    <TextView
+                        android:id="@+id/to_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/date_to"
+                        android:padding="5dp"
+                        android:text="Set end date"
+                        android:textColor="@color/colorgreen" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/finalstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="" />
+
+            <Button
+                android:id="@+id/applyfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/stroke_shape"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:text="Apply filter"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/removefilter"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/stroke_shape"
+                android:gravity="center"
+
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:text="Remove filter"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

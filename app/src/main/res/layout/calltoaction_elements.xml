@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeName">
+
+        <TextView
+            android:id="@+id/toolbartext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Call To Action"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+    <!--Yes no maybe-->
+    <LinearLayout
+        android:id="@+id/yes_no_maybe_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/yes_no_maybe_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:hint="Please Respond Below"
+            android:maxLines="3"
+            android:textAlignment="center"
+            android:textColor="@color/colorblack"
+            android:textColorHint="@color/colorblack"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                android:text="YES"
+                android:textColor="@color/colorwhite" />
+
+            <Button
+                android:id="@+id/no"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorRed"
+                android:text="NO"
+                android:textColor="@color/colorwhite"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/maybe"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@color/colorLinkCall"
+                android:text="MAYBE"
+                android:textColor="@color/colorwhite"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Poll items-->
+    <LinearLayout
+        android:id="@+id/pollOutputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="10dp"
+
+        android:minHeight="120dp"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/pollText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Please Choose Below"
+            android:textColor="@color/colorblack"
+            android:textColorHint="@color/colorblack"
+            android:textSize="@dimen/simple_text" />
+
+        <LinearLayout
+            android:id="@+id/optionOneLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option1Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="Option 1"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionTwoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option2Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="Option 2"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionThreeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option3Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="Option 3"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionFourLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option4Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="Option 4"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionFiveLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/blackcircle" />
+
+            <TextView
+                android:id="@+id/option5Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:hint="Option 5"
+                android:textColor="@color/colorblack"
+                android:textColorHint="@color/colorblack" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Feed back-->
+    <LinearLayout
+        android:id="@+id/feedbackOutputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="10dp"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Select a Rating"
+            android:textColor="@color/colorblack"
+            android:textColorHint="@color/colorblack"
+            android:textSize="@dimen/simple_text" />
+
+        <RatingBar
+            android:id="@+id/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:scaleX="0.7"
+            android:scaleY="0.7" />
+    </LinearLayout>
+
+    <!--Link call-->
+    <LinearLayout
+        android:id="@+id/linkOutputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorLinkCall"
+            android:hint="Click Here"
+            android:maxHeight="60dp"
+            android:maxWidth="280dp"
+            android:minHeight="20dp"
+            android:minWidth="60dp"
+            android:padding="10dp"
+            android:textAllCaps="false"
+            android:textColor="@color/colorwhite"
+            android:textColorHint="@color/colorwhite"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBasicGray" />
+
+    <!---Tab Host Buttons-->
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/yes_no_maybe_btn"
+                android:layout_width="37dp"
+                android:layout_height="38dp"
+                android:background="@drawable/responsecta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/responseToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Response"
+                android:textColor="@color/colorgrey"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/poll_btn"
+                android:layout_width="41dp"
+                android:layout_height="38dp"
+                android:background="@drawable/pollcta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/pollToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poll"
+                android:textColor="@color/colorgrey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/feedback_btn"
+                android:layout_width="39dp"
+                android:layout_height="38dp"
+                android:background="@drawable/feedbackcta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/feedbackToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feedback"
+                android:textColor="@color/colorgrey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/Link_Call_btn"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:background="@drawable/linkcallcta"
+                android:textOff=""
+                android:textOn="" />
+
+            <TextView
+                android:id="@+id/callToggleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Link/Call"
+                android:textColor="@color/colorgrey"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBasicGray" />
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearl"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/white" />
+</LinearLayout>

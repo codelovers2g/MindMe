@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeName">
+
+        <TextView
+            android:id="@+id/daytitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Create a Special Offer"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgrey"
+                android:padding="10dp"
+                android:text="Add your offer's details" />
+
+            <EditText
+                android:id="@+id/edit_txt_offer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Name your offer"
+                android:padding="10dp"
+                android:textColor="@color/colorgreen" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/colorgrey"></View>
+
+            <EditText
+                android:id="@+id/edit_txt_offer_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Describe your offer and include any terms and conditions"
+                android:padding="10dp"
+                android:textColor="@color/colorgreen" />
+            <!--type of offer-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgrey"
+                android:padding="10dp"
+                android:text="Type of Offer" />
+
+            <!--section FREE SAVE OTHER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/free"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="true"
+                    android:text="Free"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Free"
+                    android:textOn="Free" />
+
+                <ToggleButton
+                    android:id="@+id/Save"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="false"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Save"
+                    android:textOn="Save" />
+
+                <ToggleButton
+                    android:id="@+id/Other"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="false"
+                    android:text="Other"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Other"
+                    android:textOn="Other" />
+            </LinearLayout>
+
+            <!-- SAVE MENU -->
+            <LinearLayout
+                android:id="@+id/saveMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <EditText
+                    android:id="@+id/EditTextOfferAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorgreen"
+                    android:textColorHint="@color/colorgreen" />
+
+                <ToggleButton
+                    android:id="@+id/t_btn_save_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/special_offer_save_two"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+                <ToggleButton
+                    android:id="@+id/t_btn_save_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/special_offer_save"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+
+            <!-- OTHER MENU -->
+            <LinearLayout
+                android:id="@+id/otherMenu"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorwhite"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/EditTextOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="include your offer here..."
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/colorgreen" />
+            </LinearLayout>
+
+            <!--Expiration On -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgrey"
+                android:padding="10dp"
+                android:text="Expiration" />
+
+            <!--section NONE AFTER ON DATE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/None"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="true"
+                    android:text="None"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="None"
+                    android:textOn="None" />
+
+                <ToggleButton
+                    android:id="@+id/After"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="false"
+                    android:text="After"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="After"
+                    android:textOn="After" />
+
+                <ToggleButton
+                    android:id="@+id/OnDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="false"
+                    android:text="On Date"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="On Date"
+                    android:textOn="On Date" />
+            </LinearLayout>
+
+            <!--ON DATE MENU-->
+            <LinearLayout
+                android:id="@+id/onDateMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_on_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:hint="Choose Date"
+                    android:padding="10dp"
+                    android:textColor="@color/colorgreen"
+                    android:textColorHint="@color/colorgreen" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorgrey"></View>
+
+            </LinearLayout>
+
+            <!--Display offers On-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorgrey"
+                android:padding="10dp"
+                android:text="Display Offer On..." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorwhite"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:weightSum="3">
+
+                <ToggleButton
+                    android:id="@+id/ThisPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="true"
+                    android:text="This Page"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="This Page"
+                    android:textOn="This Page" />
+
+                <ToggleButton
+                    android:id="@+id/ThankYou"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="false"
+                    android:text="Thank You"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Thank You"
+                    android:textOn="Thank You" />
+
+                <ToggleButton
+                    android:id="@+id/Both"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/contactscreated1"
+                    android:checked="false"
+                    android:text="Both"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Both"
+                    android:textOn="Both" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

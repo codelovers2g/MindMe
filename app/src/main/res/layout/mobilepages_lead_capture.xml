@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
+    tools:context=".GettingStarted.Profile_settings">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeName">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Lead Capture"
+            android:textAlignment="center"
+            android:textColor="@color/colorwhite"
+            android:textSize="@dimen/activityHeaderText" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:background="@color/colorgrey"
+                android:padding="10dp"
+                android:text="Add fields to form (double tap to required)"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorgrey" />
+
+            <com.mindmesolo.mindme.helper.CustomListView
+                android:id="@+id/ListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView2"
+                android:layout_below="@+id/textview1"></com.mindmesolo.mindme.helper.CustomListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorgrey"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listView"
+                android:background="@color/colorgrey"
+                android:padding="10dp"
+                android:text="Add interests to from"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorgrey"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/childlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/custom"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:visibility="visible"
+                android:weightSum="6">
+
+                <ToggleButton
+                    android:id="@+id/t_btn_none"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/sixty_dayz"
+                    android:layout_margin="3dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/contactscreated1"
+                    android:text="None"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="None"
+                    android:textOn="None"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/t_btn_select"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/sixty_dayz"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@+id/week"
+                    android:layout_weight="2"
+                    android:background="@drawable/contactscreated1"
+                    android:text="Select"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="Select"
+                    android:textOn="Select"
+                    android:textSize="12sp" />
+
+                <ToggleButton
+                    android:id="@+id/t_btn_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/sixty_dayz"
+                    android:layout_margin="3dp"
+                    android:layout_toRightOf="@+id/month"
+                    android:layout_weight="2"
+                    android:background="@drawable/contactscreated1"
+                    android:text="All"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@drawable/toggle_textcolor"
+                    android:textOff="All"
+                    android:textOn="All"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorgrey" />
+
+            <ListView
+                android:id="@+id/listView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

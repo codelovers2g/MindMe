@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/layoutTwo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorblack"
+                android:textSize="@dimen/simple_text" />
+
+            <TextView
+                android:id="@+id/date_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title"
+                android:layout_gravity="start"
+                android:paddingLeft="5dp"
+                android:text=""
+                android:textAlignment="textStart" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/emailImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/email_black"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/smsImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:focusable="false"
+                android:src="@drawable/text_msg"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/VoiceImage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="3dp"
+                android:layout_marginRight="3dp"
+                android:focusable="false"
+                android:src="@drawable/phone_call"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:focusable="false"
+                android:text="0"
+                android:textSize="@dimen/heading_two" />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:focusable="false"
+                android:src="@drawable/right_arrow" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
